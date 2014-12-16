@@ -1,0 +1,22 @@
+{
+  "name": "typelib",
+  "version": "1.0.0",
+  "description": "Type declaration utilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srcspider/typelib"
+  },
+  "keywords": [
+    "types"
+  ],
+  "author": "srcspider <source.spider@gmail.com>",
+  "license": "BSD-2",
+  "bugs": {
+    "url": "https://github.com/srcspider/typelib/issues"
+  },
+  "homepage": "https://github.com/srcspider/typelib"
+}
