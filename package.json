@@ -1,6 +1,6 @@
 {
   "name": "typelib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Type declaration utilities",
   "main": "index.js",
   "scripts": {

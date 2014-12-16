@@ -121,7 +121,8 @@ var example = new ExampleClass('world');
 example.hello(); // => "hello, world"
 ```
 
-If you need a equivalent of `struct` in javascript the above is almost always all you need.
+If you need a equivalent of `struct` in javascript the above is almost
+always all you need.
 
 #### How does that even work?
 
@@ -130,8 +131,9 @@ Let me break down the `new ExampleClass('world')` there into fundamental operati
 Here is what javascript does for you when you call a function using `new`:
 
 ```js
-// create a [new] object and set it's internal prototype mechanism pointer to point to
-// the object defined in the property "prototype" of the function "ExampleClass"
+// create a [new] object and set it's internal prototype mechanism pointer
+// to point to the object defined in the property "prototype" of the
+// function "ExampleClass"
 var new_object = Object.create(ExampleClass.prototype);
 // invoke the function setting [this] to [new object]
 ExampleClass.call(new_object, 'world');
@@ -139,17 +141,22 @@ ExampleClass.call(new_object, 'world');
 
 In the above, if you're not familiar with them,
 
- - `Object.create(object_to_use_as_prototype)` creates a new empty object which has its internal prototype
-   pointer set to the object passed as the first parameter
- - `.call` invokes a function with the first parameter passed to the function as the variable `this`
-   and all the other parameters passed in as regular function parameter
+ - `Object.create(object_to_use_as_prototype)` creates a new empty object
+   which has its internal prototype pointer set to the object passed as the
+   first parameter
+ - `.call` invokes a function with the first parameter passed to the function
+   as the variable `this` and all the other parameters passed in as regular
+   function parameter
 
 ### But I need to extend stuff!
 
 Easy!
 
-First, get a `merge` function that can combine the properties of two arbitrary number of objects, JQuery's `$.extends`, underscores or lodash's `_.merge`, node's `require('util')._extend`, whatever you can find will do! If you include
-`Object.assign` polyfill you can just use that instead. We'll assume you have it as an `assign` function in the example.
+First, get a `merge` function that can combine the properties of two arbitrary
+number of objects, JQuery's `$.extends`, underscores or lodash's `_.merge`,
+node's `require('util')._extend`, whatever you can find will do! If you
+include `Object.assign` polyfill you can just use that instead. We'll assume
+you have it as an `assign` function in the example.
 
 Now you just do,
 
@@ -172,8 +179,11 @@ module.exports = Example;
 
 ### So why use typelib?
 
-`typelib` is really small, much smaller then libraries like underscore / lodash / jQuery.
+`typelib` is really small, much smaller then libraries like underscore,
+lodash, jQuery, and so on.
 
-The merge functions it provides are also specialized towards declaring types. The code from using them is also easier to understand for anyone that doesn't know the finer details of javascript, and easy for them to use to get going.
+The merge functions it provides are also specialized towards declaring types.
+The code from using them is also easier to understand for anyone that doesn't
+know the finer details of javascript, and easy for them to use to get going.
 
 But hey if you can manage with out it, more power to you!
