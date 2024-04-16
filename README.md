@@ -1,3 +1,13 @@
+2024-04 — This project was from the time when javascript didnt have types
+or class and typescript didnt exist. This library basically allows for easy use of
+prototype typing, which in current times is more or less a lost art as
+everyone only uses typescript or `class` keyword now.
+
+The project is **archived** and only available for historical reference purposes.
+It's not equivalent, but most cases just using `class` and/or `typescript` is plenty.
+
+--- 
+
 **typelib** is a easy lowlevel, no-magic, no fuss, type definition library
 
 The library helps you define struct-like structures, class-like structures,
